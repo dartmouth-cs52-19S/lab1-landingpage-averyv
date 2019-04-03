@@ -1,0 +1,37 @@
+html, body {
+    margin:0;
+    padding:0;
+    font-family:'Open Sans',sans-serif;
+}
+
+a {
+    color: #a4a4a4;
+    text-decoration:none;
+}
+
+a:hover {
+    opacity: .65;
+}
+
+nav {
+    background-color:black;
+    height: 44px;
+    width: auto;
+}
+
+.nav-info {
+    display: flex;
+    align-content: center;
+    justify-content:space-between;
+    list-style-type: none;
+}
+
+.nav-info a {
+    color: white;
+    font-size: 14px;
+}
+
+.section-content {
+    display: flex;
+    justify-content: center;
+}
