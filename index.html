@@ -1,93 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Telekinesis</title>
-    <!--<link rel='stylesheet' type='text/css' href='style.css'>-->
-    <!--<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>-->
+    <title>Starbuch</title>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-    <nav>
+    <nav class='nav-container'>
         <ul>
-            <li>
-                <a href="#"><img src="images/brain-logo.svg", width="30",height="30"></a>
-            </li>
-            <li>
-                <a href="#">Thanos</a>
-            </li>
-            <li>
-                <a href="#">Yoda</a>
-            </li>
-            <li>
-                <a href="#">Kinetix</a>
-            </li>
-            <li>
-                <a href="#">Support</a>
-            </li>
-            <li>
-                <a href="#"><img src="images/search.svg",width="30",height="10"></a>
-            </li>
-    </ul>
-</nav>
+            <div class="nav-info">
+                <li>
+                    <a href="#"><img src="images/brain-logo.svg", width="30",height="30"></a>
+                </li>
+                <li>
+                    <a href="#" class="tab">Our Mission</a>
+                </li>
+                <li>
+                    <a href="#" class="tab">Drinks</a>
+                </li>
+                <li>
+                    <a href="#" class="tab">Food</a>
+                </li>
+                <li>
+                    <a href="#" class="tab">Support</a>
+                </li>
+                <li>
+                    <a href="#" class="tab">Sign In</a>
+                </li>
+            </div>
+        </ul>
+    </nav>
+<!--https://www.w3schools.com/howto/howto_css_hero_image.asp-->
+<!--https://codetheweb.blog/2017/12/07/fullscreen-image-hero/-->
+<section class="hero-image">
+    <div class="hero-text">
+        <h1> 
+        Introducing Stawberry Watermelon Kombucha <br>
+        </h1>
+        <p> Spring is here! Celebrate the warmer weather with our newest crisp and refreshing flavor.
+        </p>
+        <!--Starbucks-->
+        <div class="button">
+            <span class="button-cta"><a href="#">More info.</a></span>
+        </div>
+    </header>
+</section>
 
-<header>
-    <h1> 
-    Control your mind and <br> control your surroundings.
-    </h1>
-    <p> Move the objects around you without moving a muscle 
-    with revolutionary Telekinesis technology.
-    </p>
-</header>
+<section class="learn-more">
+    <p>not sure what will go here</p>
+        
+</section>
 
-<h2 class="headline">Kinetix v4</h2>
-<p class="product-description">
-    Compact design. Telekinetic range of up to 50 feet. <br> 
-    Lifts up to 15 pounds. Unbeatable safety.
-</p>
-<a href="#">Buy now.</a>
-<a href="#">Learn more.</a>
-
-<h2 class="headline">Thanos v2</h2>
-<p class="product-description">
-    Moves light objects with revolutionary control. <br> 
-    Customizable default movements. 
-</p>
-<a href="#">Buy now.</a>
-<a href="#">Learn more.</a>
-
-<p>Join our email list to be the first to find out about Telekinesis' newest technologies.</p>
-<form>
-    <input name="email" type="email" placeholder="Enter email...">
-    <input class="button" type="submit" value="Get Started">
-</form>
+<section class="drink-section">
+    <a href="#"></a><img class="buch-image" src="images/kombucha.jpg"></a>
+    <div class = "drink-text">
+        <h1>Brewed in small batches, always.</h1>
+        <p>The freshest, purest kombucha you can find.</p>
+    </div>
+</section>
 
 <footer>
-    <div id="left-footer-col">
-        <ul>
-            <li><span class="footer-col-title">All products.</span></li>
-            <li>Thanos</li>
-            <li>Yoda</li>
-            <li>Kinetix</li>
-            <li>Accessories</li>
-        </ul>
-    </div>
-    <div id="middle-footer-col">
-        <ul>
-            <li><span class="footer-col-title">Account</span></li>
-            <li>My TeleAccount</li>
-            <li>Manage Your Account</li>
-            <li>My TeleMovements</li>
-            <li>Order Status</li>
-        </ul>
-    </div>
-    <div id="right-footer-col">
-        <ul>
-            <li><span class="footer-col-title">Company</span></li>
-            <li>About Us</li>
-            <li>FAQ</li>
-            <li>Jobs</li>
-            <li>Terms of Service</li>
-        </ul>
+    <div class="footer-container">
+        <!--Inspired by Starbucks-->
+        <div class="footer-top">
+            <p>Stay up to date with all things Starbuch.</p>
+            <form>
+                <input name="email" type="email" placeholder="Enter email...">
+                <input class="button" type="submit" value="Join">
+            </form>
+        </div>
+        <div class="footer-main">
+            <ul class = "footer-col">
+                <li><a href="#" class="footer-col-title">All products.</a></li>
+                <li><a href= "#">Thanos</a></li>
+                <li><a href= "#">Yoda</a></li>
+                <li><a href= "#">Kinetix</a></li>
+                <li><a href= "#">Accessories</a></li>  
+            </ul>
+            <ul class = "footer-col">
+                <li><a href="#" class="footer-col-title">Account</a></li>
+                <li><a href= "#">My TeleAccount</a></li>
+                <li><a href= "#">Manage Your Account</a></li>
+                <li><a href= "#">My TeleMovements</a></li>
+                <li><a href= "#">Order Status</a></li>
+            </ul>
+            <ul class= "footer-col">
+                <li><a href="#" class="footer-col-title">Company</a></li>
+                <li><a href= "#">About Us</a></li>
+                <li><a href= "#">FAQ</a></li>
+                <li><a href= "#">Jobs</a></li>
+                <li><a href= "#">Terms of Service</a></li>
+            </ul>
+        </div>
     </div>
 </footer>
 
