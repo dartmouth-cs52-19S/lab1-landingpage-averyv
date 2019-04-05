@@ -1,100 +1,144 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Starbuch</title>
-    <link rel='stylesheet' type='text/css' href='style.css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-</head>
+    <head>
+        <title>Starbuch</title>
+        <!--<link rel='stylesheet' type='text/css' href='style.css'>-->
+        <!--https://stackoverflow.com/questions/42563606/how-do-you-use-multiple-google-fonts-in-a-webpage-->
+        <link href="https://fonts.googleapis.com/css?family=Lato|Crete+Round" rel="stylesheet" type='text/css'>
+    </head>
 
-<body>
-    <nav class='nav-container'>
-        <ul>
-            <div class="nav-info">
-                <li>
-                    <a href="#"><img src="images/brain-logo.svg", width="30",height="30"></a>
-                </li>
-                <li>
-                    <a href="#" class="tab">Our Mission</a>
-                </li>
-                <li>
-                    <a href="#" class="tab">Drinks</a>
-                </li>
-                <li>
-                    <a href="#" class="tab">Food</a>
-                </li>
-                <li>
-                    <a href="#" class="tab">Support</a>
-                </li>
-                <li>
-                    <a href="#" class="tab">Sign In</a>
-                </li>
+    <body>
+        <nav>
+            <ul>
+                <div>
+                    <li>
+                        <a href="#"><img src="images/frame-logo.svg" id="logo" width= 30 height=30></a>
+                    </li>
+                    <li>
+                        <a href="#">Our Mission</a>
+                    </li>
+                    <li>
+                        <a href="#">Drinks</a>
+                    </li>
+                    <li>
+                        <a href="#">Food</a>
+                    </li>
+                    <li>
+                        <a href="#">Equipment</a>
+                    </li>
+                    <li>
+                        <a href="#">Support</a>
+                    </li>
+                    <li>
+                        <a href="#">Sign In</a>
+                    </li>
+                </div>
+            </ul>
+        </nav>
+
+        <!--https://www.w3schools.com/howto/howto_css_hero_image.asp-->
+        <!--https://codetheweb.blog/2017/12/07/fullscreen-image-hero/-->
+        <section>
+            <div>
+                <h1> 
+                Introducing Stawberry Watermelon Kombucha <br>
+                </h1>
+                <p> Spring is here! Celebrate the warmer weather with our newest crisp and refreshing flavor.
+                </p>
+                <!--Starbucks-->
+                <div class="button">
+                    <span class="button-cta"><a href="#">More info.</a></span>
+                </div>
+            </header>
+        </section>
+
+        <section>
+            <h1>Want to learn more?</h1>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <a href="#"><img src="images/article-1.png" height=200 width=300></a>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#">The benefits of kombucha</a>
+                    </div>
+                    <div>
+                            <a href="#">Read more</a>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <a href="#"><img src="images/article-2.png" height=200 width=300></a>
+                        </div>
+                    </div>
+                    <div>
+                            <a href="#">The key to great kombucha (hint: real ingredients, small batches)</a>
+                    </div>
+                    <div>
+                            <a href="#">Read more</a>
+                    </div>
+                </div>
             </div>
-        </ul>
-    </nav>
-<!--https://www.w3schools.com/howto/howto_css_hero_image.asp-->
-<!--https://codetheweb.blog/2017/12/07/fullscreen-image-hero/-->
-<section class="hero-image">
-    <div class="hero-text">
-        <h1> 
-        Introducing Stawberry Watermelon Kombucha <br>
-        </h1>
-        <p> Spring is here! Celebrate the warmer weather with our newest crisp and refreshing flavor.
-        </p>
-        <!--Starbucks-->
-        <div class="button">
-            <span class="button-cta"><a href="#">More info.</a></span>
-        </div>
-    </header>
-</section>
+        </section>
 
-<section class="learn-more">
-    <p>not sure what will go here</p>
-        
-</section>
+        <section>
+            <div>
+                <div>
+                    <div>
+                        <ul> 
+                            <li><a href="#" ><img src="images/twitter.png"></a></li>
+                            <li><a href="#"><img src="images/instagram.png"></a></li>
+                            <li><a href="#" ><img src="images/youtube.png"></a></li>
+                            <li><a href="#" ><img src="images/linkedin.png"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p>Stay up to date with Starbuch.</p>
+                    </div>
+                    <div>
+                        <form>
+                            <input name="email" type="email" placeholder="Enter email...">
+                            <input name="zip-code" type="text" placeholder="Zip code">
+                            <input class="button" type="submit" value="Join">
+                        </form>
+                    </div>
+                    <div>
+                        <p>By clicking <span id="sign-up">"Join"</span> I allow Starbuch to send me all of its incredible content.  See our <a href="#" class="linked-text">Privacy Statement</a> here.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section class="drink-section">
-    <a href="#"></a><img class="buch-image" src="images/kombucha.jpg"></a>
-    <div class = "drink-text">
-        <h1>Brewed in small batches, always.</h1>
-        <p>The freshest, purest kombucha you can find.</p>
-    </div>
-</section>
-
-<footer>
-    <div class="footer-container">
-        <!--Inspired by Starbucks-->
-        <div class="footer-top">
-            <p>Stay up to date with all things Starbuch.</p>
-            <form>
-                <input name="email" type="email" placeholder="Enter email...">
-                <input class="button" type="submit" value="Join">
-            </form>
-        </div>
-        <div class="footer-main">
-            <ul class = "footer-col">
-                <li><a href="#" class="footer-col-title">All products.</a></li>
-                <li><a href= "#">Thanos</a></li>
-                <li><a href= "#">Yoda</a></li>
-                <li><a href= "#">Kinetix</a></li>
-                <li><a href= "#">Accessories</a></li>  
-            </ul>
-            <ul class = "footer-col">
-                <li><a href="#" class="footer-col-title">Account</a></li>
-                <li><a href= "#">My TeleAccount</a></li>
-                <li><a href= "#">Manage Your Account</a></li>
-                <li><a href= "#">My TeleMovements</a></li>
-                <li><a href= "#">Order Status</a></li>
-            </ul>
-            <ul class= "footer-col">
-                <li><a href="#" class="footer-col-title">Company</a></li>
-                <li><a href= "#">About Us</a></li>
-                <li><a href= "#">FAQ</a></li>
-                <li><a href= "#">Jobs</a></li>
-                <li><a href= "#">Terms of Service</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-</body>
+        <footer>
+            <div>
+                <div>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href= "#">Our Company</a></li>
+                        <li><a href= "#">Our Story</a></li>
+                        <li><a href= "#">Why Kombucha?</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href= "#">Find a Store</a></li>
+                        <li><a href= "#">Equipment</a></li>
+                        <li><a href= "#">Special Orders</a></li>
+                        <li><a href= "#">Return Policy</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Company</a></li>
+                        <li><a href= "#">FAQ</a></li>
+                        <li><a href= "#">Jobs</a></li>
+                        <li><a href= "#">Terms of Service</a></li>
+                        <li><a href= "#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </body>
 </html>
