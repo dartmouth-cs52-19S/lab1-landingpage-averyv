@@ -1,144 +1,125 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Starbuch</title>
-        <!--<link rel='stylesheet' type='text/css' href='style.css'>-->
-        <!--https://stackoverflow.com/questions/42563606/how-do-you-use-multiple-google-fonts-in-a-webpage-->
-        <link href="https://fonts.googleapis.com/css?family=Lato|Crete+Round" rel="stylesheet" type='text/css'>
-    </head>
+<head>
+    <title>Starbuch</title>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Crete+Round" rel="stylesheet" type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
 
-    <body>
-        <nav>
-            <ul>
-                <div>
-                    <li>
-                        <a href="#"><img src="images/frame-logo.svg" id="logo" width= 30 height=30></a>
-                    </li>
-                    <li>
-                        <a href="#">Our Mission</a>
-                    </li>
-                    <li>
-                        <a href="#">Drinks</a>
-                    </li>
-                    <li>
-                        <a href="#">Food</a>
-                    </li>
-                    <li>
-                        <a href="#">Equipment</a>
-                    </li>
-                    <li>
-                        <a href="#">Support</a>
-                    </li>
-                    <li>
-                        <a href="#">Sign In</a>
-                    </li>
-                </div>
+<body>
+    <div class="flex-container">
+        <nav class="nav-container">
+            <a href="#" id="logo"><img src="images/logo.svg" ></a>
+            <ul class="nav-info" id="full-screen-nav-info">
+                <li><a href="#" class="tab">Our Mission</a></li>
+                <li><a href="#" class="tab">Drinks</a></li>
+                <li><a href="#" class="tab">Food</a></li>
+                <li><a href="#" class="tab">Equipment</a></li>
+                <li><a href="#" class="tab">Support</a></li>
+                <li><a href="#" class="tab">Sign In</a></li>
             </ul>
-        </nav>
-
-        <!--https://www.w3schools.com/howto/howto_css_hero_image.asp-->
-        <!--https://codetheweb.blog/2017/12/07/fullscreen-image-hero/-->
-        <section>
-            <div>
-                <h1> 
-                Introducing Stawberry Watermelon Kombucha <br>
-                </h1>
-                <p> Spring is here! Celebrate the warmer weather with our newest crisp and refreshing flavor.
-                </p>
-                <!--Starbucks-->
-                <div class="button">
-                    <span class="button-cta"><a href="#">More info.</a></span>
-                </div>
-            </header>
-        </section>
-
-        <section>
-            <h1>Want to learn more?</h1>
-            <div>
-                <div>
-                    <div>
-                        <div>
-                            <a href="#"><img src="images/article-1.png" height=200 width=300></a>
-                        </div>
+            <!--The class "small-screen-menu" is inspired by https://css-tricks.com/the-checkbox-hack/ and
+            http://dabblet.com/gist/1507175. This method is a "Checkbox Hack" that uses a hidden radio button 
+            to make a dropdown menu-->
+            <div class="small-screen-menu">
+                <div class="menu-tab">
+                    <input type="radio" id="menu-icon" name="menu-tab-group">
+                    <label for="menu-icon"><i class="fas fa-bars"></i></label>
+                    <div class="menu-tab close-tab">
+                        <input type="radio" id="tab-close" name="menu-tab-group">
+                        <label for="tab-close"><i class="far fa-window-close"></i></label>
                     </div>
-                    <div>
-                        <a href="#">The benefits of kombucha</a>
-                    </div>
-                    <div>
-                            <a href="#">Read more</a>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <div>
-                            <a href="#"><img src="images/article-2.png" height=200 width=300></a>
-                        </div>
-                    </div>
-                    <div>
-                            <a href="#">The key to great kombucha (hint: real ingredients, small batches)</a>
-                    </div>
-                    <div>
-                            <a href="#">Read more</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div>
-                <div>
-                    <div>
-                        <ul> 
-                            <li><a href="#" ><img src="images/twitter.png"></a></li>
-                            <li><a href="#"><img src="images/instagram.png"></a></li>
-                            <li><a href="#" ><img src="images/youtube.png"></a></li>
-                            <li><a href="#" ><img src="images/linkedin.png"></a></li>
+                    <div class="content">
+                        <ul class="nav-info" id="small-screen-nav-info">
+                            <li><a href="#" class="tab">Our Mission</a></li>
+                            <li><a href="#" class="tab">Drinks</a></li>
+                            <li><a href="#" class="tab">Food</a></li>
+                            <li><a href="#" class="tab">Equipment</a></li>
+                            <li><a href="#" class="tab">Support</a></li>
+                            <li><a href="#" class="tab">Sign In</a></li>
                         </ul>
                     </div>
                 </div>
-                <div>
-                    <div>
-                        <p>Stay up to date with Starbuch.</p>
-                    </div>
-                    <div>
-                        <form>
-                            <input name="email" type="email" placeholder="Enter email...">
-                            <input name="zip-code" type="text" placeholder="Zip code">
-                            <input class="button" type="submit" value="Join">
-                        </form>
-                    </div>
-                    <div>
-                        <p>By clicking <span id="sign-up">"Join"</span> I allow Starbuch to send me all of its incredible content.  See our <a href="#" class="linked-text">Privacy Statement</a> here.</p>
+            </div>
+        </nav>
+        <div class="body-container">
+            <!--The method is inspired by https://codetheweb.blog/2017/12/07/fullscreen-image-hero/
+            This method implements a full-screen banner image-->
+            <div class="hero-image">
+                <div class="hero-text">
+                    <h1> Introducing Stawberry Watermelon Kombucha </h1>
+                    <p> Spring is here! Celebrate the warmer weather with our newest crisp and refreshing flavor.</p>
+                    <div class="button">
+                        <span class="button-cta" id="more-info"><a href="#">More info</a></span>
                     </div>
                 </div>
             </div>
-        </section>
-
+            <div class=article-container>
+                <p id="article-container-title">Want to learn more?</p>
+                <div class="grid">
+                    <div class="grid-col" id="article-1">
+                        <a href="#" class="grid-row image-container"><img class="article-image" src="images/article-1.png"></a>
+                        <a href="#" class="grid-row article-title">The benefits of kombucha</a>
+                        <a href="#" class="grid-row read-more">Read more</a>
+                    </div>
+                    <div class="grid-col" id="article-2">
+                        <a href="#" class="grid-row image-container"><img class="article-image" src="images/article-2.png"></a>
+                        <a href="#" class="grid-row article-title">The key to great kombucha (hint: real ingredients, small batches)</a>
+                        <a href="#" class="grid-row read-more">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-container">
+                <div class="grid">
+                    <div class="grid-col">
+                        <div class="grid-triple-row" id="social-container">
+                            <ul id="social-icons"> 
+                                    <li><a href="#" ><img src="images/twitter.png"></a></li>
+                                    <li><a href="#"><img src="images/instagram.png"></a></li>
+                                    <li><a href="#" ><img src="images/youtube.png"></a></li>
+                                    <li><a href="#" ><img src="images/linkedin.png"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-col" id="sign-up-container">
+                        <p class="grid-row" id="sign-up-text">Join our email list to stay up to date with StarBuch.</p>
+                        <form class="grid-row sign-up-form">
+                            <input name="email" type="email" placeholder="Enter email...">
+                            <input name="zip-code" type="text" placeholder="Zip code">
+                            <input id="join-button" type="submit" value="Join now">
+                        </form>
+                        <p class="grid-row" id="privacy">By clicking "JOIN NOW" I agree to let StarBuch send me all of its incredible content.  See our <a href="#">Privacy Statement </a> here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <footer>
-            <div>
-                <div>
-                    <ul>
-                        <li><a href="#">About us</a></li>
-                        <li><a href= "#">Our Company</a></li>
-                        <li><a href= "#">Our Story</a></li>
-                        <li><a href= "#">Why Kombucha?</a></li>
+            <div class="footer-container">
+                <div class="footer-main">
+                    <ul class = "footer-col">
+                        <li><a href="#" class="footer-col-title">About us</a></li>
+                        <li><a href= "#" class="footer-col-item">Our Company</a></li>
+                        <li><a href= "#" class="footer-col-item">Our Story</a></li>
+                        <li><a href= "#" class="footer-col-item">Why Kombucha?</a></li>
                     </ul>
-                    <ul>
-                        <li><a href="#">Shop</a></li>
-                        <li><a href= "#">Find a Store</a></li>
-                        <li><a href= "#">Equipment</a></li>
-                        <li><a href= "#">Special Orders</a></li>
-                        <li><a href= "#">Return Policy</a></li>
+                    <ul class = "footer-col">
+                        <li><a href="#" class="footer-col-title">Shop</a></li>
+                        <li><a href= "#" class="footer-col-item">Find a Store</a></li>
+                        <li><a href= "#" class="footer-col-item">Equipment</a></li>
+                        <li><a href= "#" class="footer-col-item">Special Orders</a></li>
+                        <li><a href= "#" class="footer-col-item">Return Policy</a></li>
                     </ul>
-                    <ul>
-                        <li><a href="#">Company</a></li>
-                        <li><a href= "#">FAQ</a></li>
-                        <li><a href= "#">Jobs</a></li>
-                        <li><a href= "#">Terms of Service</a></li>
-                        <li><a href= "#">Contact Us</a></li>
+                    <ul class= "footer-col">
+                        <li><a href="#" class="footer-col-title">Company</a></li>
+                        <li><a href= "#" class="footer-col-item">FAQ</a></li>
+                        <li><a href= "#" class="footer-col-item">Jobs</a></li>
+                        <li><a href= "#" class="footer-col-item">Terms of Service</a></li>
+                        <li><a href= "#" class="footer-col-item">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
         </footer>
-    </body>
+    </div>
+</body>
 </html>

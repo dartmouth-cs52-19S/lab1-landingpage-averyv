@@ -1,12 +1,20 @@
 body {
-    /*Margin inspired by Dekin O'Sullivan's answer in https://teamtreehouse.com/community/i-cant-remove-the-white-space-on-top-of-my-page*/
+    /*Margin dimensions by Dekin O'Sullivan's answer in https://teamtreehouse.com/community/i-cant-remove-the-white-space-on-top-of-my-page
+    These margins get rid of the white space on top of the page.
+    */
     margin:-3% 0 30px 0;
     padding:0;
     font-family: 'Lato',Helvetica, Arial, sans-serif;
     color: #3d3a35;
     font-size: 1.4rem;
-    line-height: 1.714286;
+    line-height: 1.7;
     box-sizing: border-box;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 a {
@@ -15,37 +23,50 @@ a {
     color: #3d3a35;
 }
 
-nav {
+.nav-container {
     background-color:#f7f7f7;
-    height: 78px;
-    width: auto;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 10vw;
 }
 
 .nav-info {
-    position: absolute, bottom 30px;
     display:flex;
     justify-content:space-around;
     list-style-type: none;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 0;
+    padding-top: 20px;
+    margin-left: 100px;
 }
 
 #logo {
     width: 62px;
     height: 62px;
-    padding-top: 10px;
+    position: sticky;
+    left: 20px;
+    top: 20px;
+    transition: all 1s ease; 
+}
+
+#logo:hover {
+    transform: rotate(30deg);
+    width: 70px;
+    transition: all 1s ease; 
 }
 
 .tab {
-    /*take from starbucks .tab strong
-    https://www.w3schools.com/css/css_navbar.asp*/
-    display: inline-block;
-    white-space: nowrap;
+    display: flex;
+    width: 120px;
     font-size: 14px;
-    line-height:1.136364;
     color: #3d3a35;
     text-transform: uppercase; 
     text-align: center;
-    padding: 50px 16px;
+    margin-top: 20px;
+    padding: 14px 14px;
 }
 
 .tab:hover {
@@ -53,126 +74,139 @@ nav {
     background: black;
 }
 
-.product-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.small-screen-menu {
+    opacity: 0;
+    height: 0px;
 }
 
-/* https://codetheweb.blog/2017/12/07/fullscreen-image-hero/ */
+.body-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Hero image inspired by https://codetheweb.blog/2017/12/07/fullscreen-image-hero/ 
+This method implements a full-screen banner image */
 .hero-image {
-    background-image: url("images/main-cover.jpg");
+    background-image: url("images/main-cover.png");
     background-size:cover;
     height: 560px;
+    width: 100%;
     background-position: center;
     position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    text-align: right;
 }
 
 .hero-text {
-    width: 500px;
-    margin-right: 30px;
+    width: 40vw;
     font-family: inherit;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-right: 15px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .hero-text h1 {
-    /*starbucks stuff */
     margin: 0 0 .25em;
     font-family: 'Crete Round', Georgia, 'Times New Roman', serif;
+    font-size: 38px;
     font-style: italic;
     vertical-align: baseline;
+    display: flex;
 }
 
 .hero-text p {
-    font-size: 100%;
+    font-size: 16.8px;
 }
 
-/* Starbucks.com HTML */
 .button-cta a {
-    display: inline-block;
+    color: white;
+    display: flex;
     white-space: nowrap;
     background: none;
     border: 1px solid;
     padding: 10px 28px;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    color: inherit;
+    border-radius: 4px;
     font-size: 1em;
     font-weight: bold;
     line-height: 1;
-    vertical-align: baseline;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: .1em;
-    cursor: pointer;
+    background-color: black;
 }
 
 .button-cta a:hover {
     background-color: rgb(255,0,0,0.3);
+    cursor: pointer;
 }
 
-.learn-more {
-    background-color: black;
-    padding-top: 20px;
-    padding-bottom: 50px;
-}
-
-
-
-.articles {
+.article-container {
     background: white;
     text-align: center;
-    margin-top: 30px;
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#article-container-title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 32px;
 }
 
 .grid {
     display: flex;
+    flex-direction: inherit;
 }
 
 .grid-col {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     flex-wrap: nowrap;
     width: 100%;
     flex-basis: 50%;
-    max-width: 50%;
     box-sizing: border-box;
+    padding: 0;
+}
+
+#article-1 {
+    margin-left: 20px;
+}
+
+#article-2 {
+    margin-right: 20px;
 }
 
 .grid-row {
     display: flex;
     flex-direction: row;
     flex-basis: 100%;
-    justify-content: center;
-    flex: 1;
+    justify-content: center;   
 }
 
-.image-container {
-    display: block;
-    height:330px;
-    width:90%;
-}
-
-/*https://stackoverflow.com/questions/15685666/changing-image-sizes-proportionally-using-css */
 .article-image {
-    height: 100%;
-    width: 100%;  
+    display: flex;
+    height: 330px;
+    width: 90%;  
     transition: all 1s ease; 
 }
 
 .article-image:hover {
     transition: all 1s ease; 
     opacity: .6;
+    border-radius: 20px;
 }
 
-.middle-title {
+.article-title {
+    display: flex;
     font-size: 20px;
     line-height: 1.3;
     margin-top: 10px;
@@ -185,17 +219,21 @@ nav {
     font-size: 14px;
 }
 
-.sign-up {
+.read-more:hover {
+    color:#1c647e;
+}
+
+.contact-container {
     background: #e5e5e5;
     border-color: #e5e5e5;
     border-width: 1px;
     border-bottom-style: solid;
     box-sizing: border-box;
+    width: 100%;
 }
 
 .grid-triple-row {
     display: flex;
-    
     flex-basis: 100%;
     align-content: center;
     flex: 3;
@@ -203,22 +241,30 @@ nav {
 
 #social-icons {
     display: flex;
-    justify-content: space-around;
-
+    justify-content: flex-start;
     margin-bottom: 35px;
-    
     width:386px;
-    height: 38px;
+    min-height: 38px;
     border: none;
     padding: 0;
     padding-left: 12px;
-    padding-right: 12px;
     box-sizing: border-box;
 }
 
 #social-icons img {
     width: 25px;
     height: 31px;
+    padding-right: 20px;
+    transition: all .2s linear;
+}
+
+/* Icon bouncing inspired by https://stackoverflow.com/questions/15925280/how-to-bounce-social-nav-icons-on-hover-focus 
+This method makes the social media icons appear to bounce on hover*/
+#social-icons img:hover {
+    margin-top: -3px;
+    width: 28px;
+    height: 35px;
+    transition: all .2s linear;
 }
 
 .grid-triple-row ul {
@@ -227,6 +273,69 @@ nav {
 
 .social-icons {
     text-align: left;
+}
+
+#sign-up-container {
+    display: flex;
+    text-align: left;
+    flex-basis: 100%;
+}
+
+#sign-up-text {
+    display: flex;
+    justify-content: flex-start;
+    padding: 7px 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+.sign-up-form {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.sign-up-form input {
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    padding: 4px 6px;
+    margin-right: 12px;
+    margin-bottom: 7px;
+}
+
+.sign-up-form input[type="email"] {
+    width:200px;
+    max-width: 100%;
+    height: 28px;
+}
+
+#join-button {
+    background-color: #3d3a35;
+    height: inherit;
+    width: auto;
+    letter-spacing: .1em;
+    color: #fff;
+    text-transform: uppercase;   
+    padding-right: 29px;
+    padding-left: 29px;
+}
+
+#join-button:hover {
+    opacity:.7;
+    cursor: pointer;
+}
+
+#privacy {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    margin-top: 5px;
+    display: inline-block;
+    line-height: 1.3;
+}
+
+#privacy a {
+    border-bottom: 1px dotted;
+    font-weight: bold;
 }
 
 .footer-container {
@@ -244,7 +353,6 @@ nav {
 
 .footer-main {
     margin:0;
-    padding:0;
     display:flex;
     flex-direction: row;
     padding: 0 20px;
@@ -255,6 +363,8 @@ nav {
 .footer-col {
     list-style-type: none;
     margin-right: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer-main a {
@@ -267,9 +377,204 @@ nav {
     cursor: pointer;
 }
 
-/*taken from Stabucks.com*/
 .footer-col-title {
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1.25;
+    display: flex;
+}
+
+@media only screen and (max-width: 640px) {
+    .nav-container {
+        padding-top: 20px;
+        justify-content: flex-end;
+        align-content: flex-end;
+    }
+
+    .nav-info {
+        opacity: 0;
+        height: 0px;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    /*Lines 405-520 are inspired by https://css-tricks.com/the-checkbox-hack/ and http://dabblet.com/gist/1507175 
+     This method is a "Checkbox Hack" that uses a hidden radio button to make a dropdown menu */
+    .small-screen-menu {
+        position: relative;
+        display: flex;
+        margin: 50px;
+        opacity: 1;
+    }
+
+    .menu-tab {
+        display: flex;
+        position: relative;
+        height: 50px;
+    }
+
+    .menu-tab label {
+        background: inherit;
+        padding: 10px 30px;
+        cursor: pointer;
+        display: flex;
+        position: relative;
+    }
+
+    .menu-tab label i {
+        font-size: 30px;
+        width: 30px;
+    }
+
+    .menu-tab label .fa-bars {
+        color: #3d3a35;
+    }
+
+    .menu-tab label .fa-window-close {
+        color: white;
+    }
+
+    .menu-tab [type=radio] {
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        margin: 0;
+        z-index: 1;
+    }
+
+    .content {
+        position: absolute;
+        top: 100%;
+        opacity: 0;
+        right: 0;
+        background:#3d3a35;
+        padding: 20px;
+        min-height: 80vw;
+        width: 80vw;
+        justify-content: center;
+    }
+
+    .tab {
+        font-size: 20px;
+        height: 40px;
+        width: 80vw;
+    }
+
+    .content ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .content a {
+        color: white;
+        display: flex;
+        white-space: nowrap;
+        text-decoration: none;
+        border-bottom: 1px solid #999;
+        padding: 5px;
+        justify-content: center;
+    }  
+
+    #small-screen-nav-info {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    [type=radio]:checked ~ label ~ .content {
+        z-index: 1;
+        opacity: 1;
+        display: flex;
+        height: inherit;
+        transition: all .5s ease;
+    }
+    
+    [type=radio]:checked ~ label ~ .content #small-screen-nav-info {
+        z-index: 1;
+        opacity: 1;
+    }
+
+    .close-tab {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .close-tab label {
+        background:#3d3a35;
+        color: white;
+    }
+
+    [type=radio]:checked ~ label ~ .close-tab {
+        z-index: 3;
+    }
+
+    .hero-image {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-text {
+        width: 90vw;
+        margin-right: 0px;
+        justify-content: center;
+    }
+
+    .hero-text p {
+        display: none;
+    }
+
+    .grid {
+        flex-direction: column;
+    }
+
+    #article-1 {
+        margin-left:0px;
+    }
+
+    #article-2 {
+        margin-right: 0px;
+    }
+
+    #social-container {
+        border-bottom: 1px solid #3d3a35;
+    }
+
+    .footer-container {
+        min-height: 100px;
+    }
+
+    .footer-col-item {
+        display: none;
+    }
+
+    .footer-main {
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .footer-col {
+        padding-right: 0px;
+        padding-left: 0px;
+        margin-right: 0px;
+    }
+
+    .footer-col-title {
+        justify-content: flex-start;
+        font-size: 15.4px;
+        border-bottom: 1px solid #3d3a35;
+        padding-right: 0px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }
 }
