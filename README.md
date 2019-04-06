@@ -11,9 +11,11 @@ __What worked:__  I struggled considerably with flexboxes; originally, my code c
 __What didn't work:__  I put some time into trying to add the Link Headers (using the CSS Checkbox hack) but wasn't able to figure that out. 
 
 ### Screenshots of layout stage:
-![alt text](file:images/html-screenshot-1.png)
+If the below images do not appear, they can be found in the images file with the names "html-screenshot-1.png," "html-screenshot-2.png," and "html-screenshot-3.png".
 
-![alt text](file:images/html-screenshot-2.png)
+![alt text](images/html-screenshot-1.png)
+
+![alt text](images/html-screenshot-2.png)
 
 ![alt text](file:images/html-screenshot-3.png)
 
@@ -29,9 +31,11 @@ __Navigation bar:__
 2. On hover, the tabs in the navigation bar change color so that the background is black, and the text is white.
 3. In the narrow version of the webpage, the navigation bar becomes a drop-down menu.  The menu label icon becomes an "X" when the menu is open.
 
-![alt text](file:images/narrow-nav-bar-1.png)
+If the below images do not appear, they can be found in the images file with the names "narrow-nav-bar-1.png" and "narrow-nav-bar-2.png."
 
-![alt text](file:images/narrow-nav-bar-2.png)
+![alt text](images/narrow-nav-bar-1.png)
+
+![alt text](images/narrow-nav-bar-2.png)
 
 __Hero image:__
 
